@@ -12,10 +12,13 @@ router.post('/', function(req, res) {
         switch (result){
             case 1:  //ok
                 userService.registerUser(username,password,function(result){
-                    console.log(result);
+                    if(result.success == 1){
+                        res.json({status:1}); //ok
+                    }
                 });
                 break;
             case 2:  //user exsit
+                res.json({status:2});
                 break;
             default:
                 break;

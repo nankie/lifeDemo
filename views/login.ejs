@@ -9,10 +9,23 @@
 </head>
 <body>
 <h3>登录页面</h3>
-<form action="/login" method="post">
-    用户名：<input type="text" name="username">
-    密码：<input type="text" name="password">
-    <input type="submit" value="登录">
-</form>
+    用户名：<input type="text" id="usm" name="username">
+    密码：<input type="text"id="pwd" name="password">
+    <input id="btn" type="button" value="登录">
 </body>
+<script type="text/javascript" src="javascripts/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+    $('#btn').click(function () {
+        var usm = $('#usm').val();
+        var pwd = $('#pwd').val();
+        $.ajax({
+            url: "/login",
+            data:{username:usm,password:pwd},
+            type: "POST",
+            success:function (data) {
+                alert(data.status);
+            }
+        });
+    });
+</script>
 </html>
