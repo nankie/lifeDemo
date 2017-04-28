@@ -8,21 +8,8 @@ router.post('/', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     // var user = new allModel.userModel(req.body.username,req.body.password);
-    userService.checkRegister(username,function(result){
-        switch (result){
-            case 1:  //ok
-                userService.registerUser(username,password,function(result){
-                    if(result.success == 1){
-                        res.json({status:1}); //ok
-                    }
-                });
-                break;
-            case 2:  //user exsit
-                res.json({status:2});
-                break;
-            default:
-                break;
-        }
+    userService.registerUser(username,password,function(result){
+        res.json({status:result});
     })
 
 });

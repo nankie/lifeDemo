@@ -9,11 +9,35 @@
 </head>
 <body>
 <h3>注册页面</h3>
-<form action="/register" method="post">
-  账号：<input type="text" name="username">
-  密码：<input type="text" name="password">
-  <input type="submit" value="提交">
+  账号：<input type="text" id="usm" name="username">
+  密码：<input type="text" id="pwd" name="password">
+  <span id="massage"></span>
+  <input id="btn" type="button" value="提交">
   <a href="/toLogin">去登陆</a>
-</form>
 </body>
+<script type="text/javascript" src="javascripts/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+  $('#btn').click(function(){
+      var usm = $('#usm').val();
+      var pwd = $('#pwd').val();
+      $.ajax({
+          url:'/register',
+          type:'post',
+          data:{username:usm,password:pwd},
+          success:function(data){
+              switch (data.status){
+                  case 1:
+                      alert('注册成功！将跳转至登录页面。');
+                      window.location = '/toLogin';
+                      break;
+                  case 2:
+                      $('#massage').html('用户名已存在！');
+                      break;
+                  default:
+                      break;
+              }
+          }
+      });
+  });
+</script>
 </html>

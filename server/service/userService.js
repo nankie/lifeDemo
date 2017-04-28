@@ -8,8 +8,17 @@ var allModel = require('../models/allModel');
 
 exports.registerUser = function(username,password,callBack){
     var user = new allModel.userModel(new mongoose.Types.ObjectId(),username,password);
-    userDao.addUser([user],helper,function(result){
-        callBack(result);
+    userDao.findUser({username:username},helper,function(result){
+        var status;
+        if(result.result == undefined && result.success == 0){
+            userDao.addUser([user],helper,function(result){
+            });
+            status = 1;  //register ok
+        }else{
+            status = 2; //user exist
+        }
+        console.log('00'+status);
+        callBack(status);
     });
 }
 
@@ -30,15 +39,15 @@ exports.loginUser = function (username,password,callBack) {
     });
 }
 
-exports.checkRegister = function(username,callBack){
-    userDao.findUser({username:username},helper,function(result){
-        console.log(result);
-        var status;
-        if(result.result == undefined && result.success == 0){
-            status = 1; //can register
-        }else{
-            status = 2; //user exist
-        }
-        callBack(status);
-    });
-}
+// exports.checkRegister = function(username,callBack){
+//     userDao.findUser({username:username},helper,function(result){
+//         console.log(result);
+//         var status;
+//         if(result.result == undefined && result.success == 0){
+//             status = 1; //can register
+//         }else{
+//             status = 2; //user exist
+//         }
+//         callBack(status);
+//     });
+// }
