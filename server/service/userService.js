@@ -6,48 +6,39 @@ var userDao = require('../DBSql/userDao');
 var mongoose = require('mongoose');
 var allModel = require('../models/allModel');
 
-exports.registerUser = function(username,password,callBack){
-    var user = new allModel.userModel(new mongoose.Types.ObjectId(),username,password);
-    userDao.findUser({username:username},helper,function(result){
-        var status;
+exports.registerUser = function(usm,pwd,nkme,type,callBack){
+    var status = null;
+    var user = new allModel.userModel(new mongoose.Types.ObjectId(),usm,pwd,nkme,type);
+    userDao.findUser({Username:usm},helper,function(result){
         if(result.result == undefined && result.success == 0){
-            userDao.addUser([user],helper,function(result){
-            });
-            status = 1;  //register ok
+            if(status = 1){        //could register ,register ok
+                userDao.addUser([user],helper,function(result){
+                    if(result.success ==0){
+                        status = 3; //register fail
+                        callBack(status);
+                    }
+                });
+            };
         }else{
             status = 2; //user exist
         }
-        console.log('00'+status);
         callBack(status);
     });
 }
 
-exports.loginUser = function (username,password,callBack) {
-    userDao.findUser({username:username},helper,function(result){
+exports.loginUser = function (usm,pwd,callBack) {
+    userDao.findUser({Username:usm},helper,function(result){
         var status;
         if(result.result == undefined && result.success == 0){
-            status = 3;//no such user
+            status = {success:3};//no such user
         }else{
             var user = result.result[0];
-            if(user.password == password){
-                status = 1; //login ok
+            if(user.Password == pwd){
+                status = {success:1 , user:user}; //login ok
             }else{
-                status = 2; //password is error
+                status = {success:2}; //password is error
             }
         }
         callBack(status);
     });
 }
-
-// exports.checkRegister = function(username,callBack){
-//     userDao.findUser({username:username},helper,function(result){
-//         console.log(result);
-//         var status;
-//         if(result.result == undefined && result.success == 0){
-//             status = 1; //can register
-//         }else{
-//             status = 2; //user exist
-//         }
-//         callBack(status);
-//     });
-// }

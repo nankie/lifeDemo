@@ -9,8 +9,8 @@
 </head>
 <body>
 <h3>注册页面</h3>
-  账号：<input type="text" id="usm" name="username">
-  密码：<input type="text" id="pwd" name="password">
+  账号：<input type="text" id="usm">
+  密码：<input type="text" id="pwd">
   <span id="massage"></span>
   <input id="btn" type="button" value="提交">
   <a href="/toLogin">去登陆</a>
@@ -23,7 +23,7 @@
       $.ajax({
           url:'/register',
           type:'post',
-          data:{username:usm,password:pwd},
+          data:{'username':usm,'password':pwd},
           success:function(data){
               switch (data.status){
                   case 1:

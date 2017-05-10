@@ -13,7 +13,7 @@ list.push(['/' , index]);
 list.push(['/register' , registerRouter]);
 list.push(['/login' , loginRouter]);
 list.push(['/toLogin' , toLoginRouter]);
-list.push(['/home' , homeRouter]);
+list.push(['/user/home' , homeRouter]);
 
 exports.initRouters = function(callBack){
     callBack(list);

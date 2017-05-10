@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoInit = require('./server/mongoInit');
 var routeList = require('./server/route_list');
+var session = require('express-session');
+
+var xmll = require('./server/utils/parser');
 
 var app = express();
 
@@ -21,13 +24,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//动态迭代添加路由
+//--配置sesssion 需要有cookie-parser
+app.use(session({
+    resave: true, // don't save session if unmodified
+    saveUninitialized: false, // don't create session until something stored
+    secret: 'love'
+}));
+
+//--登录过滤器，注意位置要在路由前面
+app.use('/user',function(req,res,next){
+    if(!req.session.user){
+        return res.render('warning');
+    }
+    next(); //next 方法一定要在语句最后
+});
+
+//--动态迭代添加路由
 routeList.initRouters(function(routes){
     for( var i in routes){
         app.use(routes[i][0],routes[i][1]);
     }
 });
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,8 +53,9 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-//global with db
+//--global with db 全局参数化
 global.db = mongoInit.getDB();
+
 
 // error handler
 app.use(function(err, req, res, next) {

@@ -26,7 +26,8 @@
             success:function (data) {
                 switch (data.status){
                     case 1:
-                        window.location = '/home';
+                        window.location = 'user/home';
+                        break;
                     case 2:
                         $('#massage').html('您的密码输入错误！');
                         break;

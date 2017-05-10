@@ -8,7 +8,10 @@ var allModel = require('../server/models/allModel');
 
 router.post('/',function(req, res,next){
     userService.loginUser(req.body.username,req.body.password,function (result) {
-        res.json({status:result});
+        if((flag = result.success) == 1){
+            req.session.user = result.user;
+        }
+        res.json({status:flag});
     })
 });
 

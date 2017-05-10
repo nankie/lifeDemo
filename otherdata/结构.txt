@@ -1,0 +1,10 @@
+<type></type>
+<title></title>
+<date></date>
+<fromWhere></fromWhere>
+<author></author>
+<artical>
+  <chapter></chapter>
+  <content></content>
+  <image></image>
+</artical>
