@@ -6,6 +6,8 @@ var registerRouter = require('../routes/registerRouter');
 var loginRouter = require('../routes/loginRouter');
 var toLoginRouter = require('../routes/toLoginRouter');
 var homeRouter = require('../routes/homeRouter');
+var newspaper = require('../routes/newspaper');
+var getAnnal = require('../routes/getAnnal');
 
 var list = [];
 /*路由列表*/
@@ -14,6 +16,8 @@ list.push(['/register' , registerRouter]);
 list.push(['/login' , loginRouter]);
 list.push(['/toLogin' , toLoginRouter]);
 list.push(['/user/home' , homeRouter]);
+list.push(['/newspaper' , newspaper]);
+list.push(['/getAnnal' , getAnnal]);
 
 exports.initRouters = function(callBack){
     callBack(list);

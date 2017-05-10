@@ -8,8 +8,6 @@ var mongoInit = require('./server/mongoInit');
 var routeList = require('./server/route_list');
 var session = require('express-session');
 
-var xmll = require('./server/utils/parser');
-
 var app = express();
 
 // view engine setup

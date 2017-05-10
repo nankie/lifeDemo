@@ -1,4 +1,4 @@
-<response id="1" shop="aldi">
+<artical id="1" shop="aldi">
     This is some other content
     <who name="james">James May</who>
     <who name="sam">
@@ -11,4 +11,4 @@
       <game>Some other great game</game>
     </games>'
     <note>These are some notes</note>
-</response>
+</artical>
