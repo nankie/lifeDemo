@@ -1,7 +1,7 @@
 /**
  * Created by fyf-hey on 2017/4/25.
  */
-exports.userModel = function(id,usm,pwd,nkme,type){
+exports.userBean = function(id,usm,pwd,nkme,type){
     this._id = id;
     this.Username = usm;
     this.Password = pwd;

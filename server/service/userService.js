@@ -4,11 +4,11 @@
 var helper = require('../DBHelper/helper');
 var userDao = require('../DBSql/userDao');
 var mongoose = require('mongoose');
-var allModel = require('../models/allModel');
+var all = require('../models/all');
 
 exports.registerUser = function(usm,pwd,nkme,type,callBack){
     var status = null;
-    var user = new allModel.userModel(new mongoose.Types.ObjectId(),usm,pwd,nkme,type);
+    var user = new all.userBean(new mongoose.Types.ObjectId(),usm,pwd,nkme,type);
     userDao.findUser({Username:usm},helper,function(result){
         if(result.result == undefined && result.success == 0){
             if(status = 1){        //could register ,register ok
@@ -34,7 +34,14 @@ exports.loginUser = function (usm,pwd,callBack) {
         }else{
             var user = result.result[0];
             if(user.Password == pwd){
-                status = {success:1 , user:user}; //login ok
+                status = {success:1, user:user}
+                // if(user.Type == 1){
+                //     status = {success:1 , user:user};//user login ok
+                // }else if(user.Type == 2){
+                //     status = {success:2 , user:user}//author login ok
+                // }else{
+                //     status = {success:3 , user:user}//admin login ok
+                // }
             }else{
                 status = {success:2}; //password is error
             }

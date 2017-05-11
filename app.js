@@ -20,7 +20,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//--静态资源映射
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/user',express.static(path.join(__dirname, 'public')));
+
+
 
 //--配置sesssion 需要有cookie-parser
 app.use(session({
@@ -30,12 +35,24 @@ app.use(session({
 }));
 
 //--登录过滤器，注意位置要在路由前面
+app.use('/',function(req,res,next){
+    var url = req.url;
+    console.log(url+'*'+__dirname);
+    next();
+})
 app.use('/user',function(req,res,next){
+    var url = req.url;
+    console.log(url+'*'+__dirname);
     if(!req.session.user){
         return res.render('warning');
     }
     next(); //next 方法一定要在语句最后
 });
+// app.use('/user/javascripts',function(req,res,next){
+//     var url = req.url;
+//     console.log(url);
+//     next(); //next 方法一定要在语句最后
+// });
 
 //--动态迭代添加路由
 routeList.initRouters(function(routes){
