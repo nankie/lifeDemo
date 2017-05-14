@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(cookieParser());
 
 //--静态资源映射
@@ -53,6 +54,9 @@ app.use('/user',function(req,res,next){
 //     console.log(url);
 //     next(); //next 方法一定要在语句最后
 // });
+
+
+
 
 //--动态迭代添加路由
 routeList.initRouters(function(routes){
