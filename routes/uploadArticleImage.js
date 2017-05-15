@@ -3,25 +3,26 @@ var express = require('express');
 var multer = require('multer');
 var router = express.Router();
 
+var localName;
 
 var Storage = multer.diskStorage({
     destination: function (req, file, callback) {
         callback(null, "./public/images");
     },
     filename: function (req, file, callback) {
-        callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+        localName = file.fieldname + "_" + Date.now() + "_" + file.originalname;
+        callback(null,localName);
     }
 });
 
 var upload = multer({ storage: Storage }).array("articleImg", 1); //设置最大上传数量
 
 router.post('/',function(req,res){
-    console.log('ok');
     upload(req, res, function (err) {
         if (err) {
-            return res.end("Something went wrong!");
+            res.json({url:'error'});
         }
-        res.json({status:'ok'});
+        res.json({url:localName});
     });
 });
 module.exports = router;

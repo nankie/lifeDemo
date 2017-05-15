@@ -19,7 +19,6 @@
 </body>
 
 <script type="text/javascript" src="javascripts/jquery-2.1.3.js"></script>
-<script type="text/javascript" src="javascripts/jquery-form.js"></script>
 <script type="text/javascript">
 var chapter = '<div><a>标题：</a><input type="text" class="article chapter"><a class="remove">X</a></div>'
 var section = '<div><a>段落：</a><input type="text" class="article section"><a class="remove">X</a></div>'
@@ -62,20 +61,59 @@ function updateImg(file){
     //formData.append('articleImg', $('#uu')[0].files[0]);  ／／上传的参数
     formData.append('articleImg', file);
     $.ajax({
-        url:'/user/upload',
+        url:'/user/uploadArticleImage',
         type:"post",
         processData: false,
         contentType: false,
         data:formData,
         async: false,
         success:function(data){
-            imageUrl = data.status;
+            if(data.url != 'error'){
+                imageUrl = data.url;
+            }else{
+                //包装图像上传错误
+            }
         }
     });
     return imageUrl;
 }
+
+//提交文章
+function submitArticle(){
+    var articleArr = []; //待上传的文章字段数组
+    var allContent = $('.article');
+    var contentNum = allContent.length;
+    for(var i = 0;i<contentNum;i++){
+        var content = allContent.eq(i);
+        //进行判断 如果是文本，存入，如果是图片，先同步上传拿到服务器端url，再将url存入
+        if(content.is('.chapter')){
+            //章节标题
+            articleArr.push({chapter:content.val()});
+        }else if(content.is('.section')){
+            //段落
+            articleArr.push({section:content.val()});
+        }else if(content.is('.image')){
+            //图片
+            var imgUrl = updateImg(content[0].files[0]);
+            articleArr.push({section:imgUrl});
+        }
+    }
+    $.ajax({
+        url:'/user/saveArticle',
+        type:'post',
+        data: {article:articleArr},
+        success:function(data){
+            if(data.result != 'error'){
+                //保存成功之后，返回url跳转到该文章
+                window.location = data.result;
+            }
+
+        }
+    })
+}
+
 $('#sub').click(function(){
-    updateImg();
+    submitArticle();
 })
 </script>
 </html>

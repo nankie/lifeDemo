@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     options = {};
-var connectionString = 'mongodb://test:test@172.16.229.166:27017/life';
-//var connectionString = 'mongodb://test:test@localhost:27017/life';
+// var connectionString = 'mongodb://test:test@172.16.229.166:27017/life';
+var connectionString = 'mongodb://test:test@localhost:27017/life';
 options = {
     server: {
         auto_reconnect: true,
