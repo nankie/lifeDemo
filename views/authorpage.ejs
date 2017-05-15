@@ -101,7 +101,9 @@ function submitArticle(){
     $.ajax({
         url:'/user/saveArticle',
         type:'post',
-        data: {article:articleArr},
+        dataType:'json',
+        data: JSON.stringify({'article':articleArr}),
+        contentType:"application/json",
         success:function(data){
             if(data.result != 'error'){
                 //保存成功之后，返回url跳转到该文章

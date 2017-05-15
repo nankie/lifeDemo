@@ -9,6 +9,7 @@ var homeRouter = require('../routes/homeRouter');
 var newspaper = require('../routes/newspaper');
 var getAnnal = require('../routes/getAnnal');
 var uploadArticleImage = require('../routes/uploadArticleImage');
+var saveArticle = require('../routes/saveArticle');
 
 var list = [];
 /*路由列表*/
@@ -20,6 +21,7 @@ list.push(['/user/home' , homeRouter]);
 list.push(['/newspaper' , newspaper]);
 list.push(['/getAnnal' , getAnnal]);
 list.push(['/user/uploadArticleImage' , uploadArticleImage]);
+list.push(['/user/saveArticle' , saveArticle]);
 
 exports.initRouters = function(callBack){
     callBack(list);
