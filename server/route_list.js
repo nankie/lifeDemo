@@ -7,7 +7,7 @@ var loginRouter = require('../routes/loginRouter');
 var toLoginRouter = require('../routes/toLoginRouter');
 var homeRouter = require('../routes/homeRouter');
 var newspaper = require('../routes/newspaper');
-var getAnnal = require('../routes/getAnnal');
+var getArticle = require('../routes/getArticle');
 var uploadArticleImage = require('../routes/uploadArticleImage');
 var saveArticle = require('../routes/saveArticle');
 
