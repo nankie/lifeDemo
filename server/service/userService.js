@@ -4,15 +4,20 @@
 var helper = require('../DBHelper/helper');
 var userDao = require('../DBSql/userDao');
 var mongoose = require('mongoose');
-var all = require('../models/all');
 
 exports.registerUser = function(usm,pwd,nkme,type,callBack){
     var status = null;
-    var user = new all.userBean(new mongoose.Types.ObjectId(),usm,pwd,nkme,type);
+    var userBean = {
+        _id:new mongoose.Types.ObjectId(),
+        Username:usm,
+        Password:pwd,
+        Nickname:nkme,
+        Type:type
+    }
     userDao.findUser({Username:usm},helper,function(result){
         if(result.result == undefined && result.success == 0){
             if(status = 1){        //could register ,register ok
-                userDao.addUser([user],helper,function(result){
+                userDao.addUser([userBean],helper,function(result){
                     if(result.success ==0){
                         status = 3; //register fail
                         callBack(status);

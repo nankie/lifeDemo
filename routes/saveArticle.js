@@ -5,7 +5,9 @@ var router = express.Router();
 router.post('/',function(req,res){
     var article = req.body.article;
     var xmlPath = './public/xml/foo.xml';
-    //TODO 生成新闻ID，以备使用：文件名
+    //TODO 数据库生成文章
+
+
 
     //异步储存xml；
     fs.writeFile(xmlPath, null, function(err){
