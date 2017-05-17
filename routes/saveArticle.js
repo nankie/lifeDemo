@@ -1,13 +1,13 @@
 var express = require('express');
 var xmlWriter = require('xml-writer');
+var articleService = require('../server/service/articleService');
 var fs = require('fs');
 var router = express.Router();
 router.post('/',function(req,res){
+    //TODO 前端页面传参完善
     var article = req.body.article;
-    var xmlPath = './public/xml/foo.xml';
-    //TODO 数据库生成文章
-
-
+    //生成xml随机唯一目录
+    var xmlPath = './public/xml/'+new Date().getTime()+Math.random()+'.xml';
 
     //异步储存xml；
     fs.writeFile(xmlPath, null, function(err){
@@ -34,10 +34,31 @@ router.post('/',function(req,res){
         }
         xw.endElement().endDocument();
         ws.end();
+
+        //创建数据库文章并保存
+        var articleBean = {
+            AuthorId:req.session.user._id,
+            Title:req.body.title,
+            IsCopy:req.body.isCopy,
+            Type:req.body.type,
+            ArticlePath:xmlPath,
+            Date:new Date()
+        };
+        if(articleBean.IsCopy==1){
+            articleBean.FromWhere = req.body.fromAuthor;
+            articleBean.FromAuthor = req.body.fromAuthor;
+        }
+        articleService.addArticle(articleBean,function(result){
+            if(result.success==1){
+                //TODO 成功，生成文章url，并且/user下跳转
+                res.json({status:1});
+            }else{
+                //失败，返回失败消息
+                res.json({status:0});
+            }
+
+        });
+
     });
-
-    //TODO 创建数据库文章并保存
-
-
 });
 module.exports = router;

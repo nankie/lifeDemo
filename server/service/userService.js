@@ -5,15 +5,9 @@ var helper = require('../DBHelper/helper');
 var userDao = require('../DBSql/userDao');
 var mongoose = require('mongoose');
 
-exports.registerUser = function(usm,pwd,nkme,type,callBack){
+exports.registerUser = function(userBean,callBack){
     var status = null;
-    var userBean = {
-        _id:new mongoose.Types.ObjectId(),
-        Username:usm,
-        Password:pwd,
-        Nickname:nkme,
-        Type:type
-    }
+    userBean._id = new mongoose.Types.ObjectId();
     userDao.findUser({Username:usm},helper,function(result){
         if(result.result == undefined && result.success == 0){
             if(status = 1){        //could register ,register ok

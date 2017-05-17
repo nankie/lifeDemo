@@ -5,7 +5,13 @@ var router = express.Router();
 router.post('/', function(req, res) {
     var type = 2;
     var nkm = 'enphy';
-    userService.registerUser(req.body.username,req.body.password,nkm,type,function(result){
+    var userBean = {
+        Username:req.body.username,
+        Password:req.body.password,
+        Nickname:nkm,
+        Type:type
+    }
+    userService.registerUser(userBean,function(result){
         res.json({status:result});
     });
 });
