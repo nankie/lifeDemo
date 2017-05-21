@@ -116,7 +116,7 @@ function submitArticle(){
         }else if(content.is('.image')){
             //图片
             var imgUrl = updateImg(content[0].files[0]);
-            articleArr.push({section:imgUrl});
+            articleArr.push({image:imgUrl});
         }
     }
     data.article = articleArr;

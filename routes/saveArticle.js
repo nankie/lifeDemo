@@ -6,8 +6,9 @@ var router = express.Router();
 router.post('/',function(req,res){
     //TODO 前端页面传参完善
     var article = req.body.article;
-    //生成xml随机唯一目录
-    var xmlPath = './public/xml/'+new Date().getTime()+Math.random()+'.xml';
+    //生成xml随机唯一文件名：时间值+八位随机数.xml
+    var xmlName = new Date().getTime() + parseInt(100000000*Math.random()) + '.xml';
+    var xmlPath = './public/xml/' + xmlName;
 
     //异步储存xml；
     fs.writeFile(xmlPath, null, function(err){
@@ -20,7 +21,9 @@ router.post('/',function(req,res){
             ws.write(string, encoding);
         });
         xw.startDocument('1.0', 'UTF-8');
-        xw.startElement('artical');
+        xw.startElement('article');
+
+        //TODO 把文章属性也写入xml中，这样在展示新闻时少一次访问数据库
 
         for(var num in article){
             var content = article[num];
@@ -41,7 +44,7 @@ router.post('/',function(req,res){
             Title:req.body.title,
             IsCopy:req.body.isCopy,
             Type:req.body.type,
-            ArticlePath:xmlPath,
+            XmlName:xmlName,
             Date:new Date()
         };
         if(articleBean.IsCopy==1){

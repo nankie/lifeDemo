@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>annal</title>
+</head>
+<body>
+<%
+var content = article.content.array;
+for(var i in content){
+    var value = content[i];
+    if(value.attributes().type == 'chapter'){%>
+        <h2><%=value.text()%></h2>
+<%}
+    if(value.attributes().type == 'section'){%>
+        <h4><%=value.text()%></h4>
+<%}
+    if(value.attributes().type == 'image'){%>
+        <img src="images/<%=value.text()%>">
+<%}
+}
+%>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

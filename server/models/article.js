@@ -13,7 +13,7 @@ var articleSchema = new mongoose.Schema({
     FromWhere:{type:String},
     FromAuthor:{type:String},
     Type:{type:String},
-    ArticlePath:{type:String},
+    XmlName:{type:String},
     Angry:{type:String},
     IsDel:{type:Number},
     DelReason:{type:String},
