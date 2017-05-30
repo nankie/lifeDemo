@@ -6,6 +6,35 @@
 </head>
 <body>
 <%
+var title = article.title.text();
+var author = article.author.text();
+%>
+<h1><%=title%></h1>
+<%
+var isCopy = article.isCopy.text();
+var fromWhere = null;
+var fromAuthor = null;
+if(isCopy == 1){
+    fromWhere = article.fromWhere.text();
+    fromAuthor = article.fromAuthor.text();
+%>
+<div>转载自<%=fromWhere%></div><div>原创者：<%=fromAuthor%></div>
+<%
+}else{
+%>
+<div>本站作者：<%=author%></div>
+<%
+}
+var type = article.type.text();
+%>
+<div>类型码：<%=type%></div>
+<%
+var date = Number(article.date.text());
+date = new Date(date);
+%>
+<div><%=date.toLocaleString()%></div>
+<%
+
 var content = article.content.array;
 for(var i in content){
     var value = content[i];

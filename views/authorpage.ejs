@@ -131,7 +131,7 @@ function submitArticle(){
         contentType:"application/json",
         success:function(data){
             if(data.result != 'error'){
-                //保存成功之后，返回url跳转到该文章
+                //TODO 保存成功之后，返回url跳转到该文章 想办法 把自动获取域名
                 window.location = data.result;
             }
 

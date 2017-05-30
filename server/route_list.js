@@ -22,6 +22,7 @@ list.push(['/newspaper' , newspaper]);
 list.push(['/user/uploadArticleImage' , uploadArticleImage]);
 list.push(['/user/saveArticle' , saveArticle]);
 list.push(['/getArticle' , getArticle]);
+list.push(['/user/getArticle' , getArticle]);
 
 
 exports.initRouters = function(callBack){
