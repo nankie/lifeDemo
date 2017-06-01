@@ -10,7 +10,6 @@ router.post('/',function(req,res){
         Title:req.body.title,
         IsCopy:req.body.isCopy,
         Type:req.body.type,
-        XmlName:xmlName,
         Date:new Date()
     };
     if(articleBean.IsCopy==1){
@@ -20,9 +19,12 @@ router.post('/',function(req,res){
     //获取传入的文章对象
     var article = req.body.article;
     //生成xml随机唯一文件名：时间值+八位随机数.xml
-    var xmlName = new Date().getTime() + '' + parseInt(10000*Math.random())
-        + articleBean.AuthorId + '.xml';
-    var xmlPath = './public/xml/' + xmlName;
+    var mark = new Date().getTime() + '' + parseInt(10000*Math.random())
+        + articleBean.AuthorId;
+
+    articleBean.Mark = mark;
+
+    var xmlPath = './public/xml/' + mark + '.xml';
 
     //异步储存xml；
     fs.writeFile(xmlPath, null, function(err){
@@ -66,7 +68,7 @@ router.post('/',function(req,res){
         articleService.addArticle(articleBean,function(result){
             if(result.success==1){
                 //成功，生成文章url，并且/user下跳转
-                res.json({result:'getArticle?mark='+xmlName});
+                res.json({result:'getArticle?mark='+mark});
             }else{
                 //失败，返回失败消息
                 res.json({result:'error'});

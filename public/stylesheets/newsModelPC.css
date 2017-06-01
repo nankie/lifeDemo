@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+#flat{
+    width: 100%;
+    min-height: 100%;
+}
+#header{
+    width:100%;
+    min-width: 1050px;
+    height: 50px;
+    background-color: #00B7FF;
+}
+#mainBoard{
+    width: 100%;
+    min-width: 800px;
+    min-height:1020px;
+}
+#footer{
+    width: 100%;
+    min-width: 1050px;
+    height: 50px;
+    background-color: #00B7FF;
+}
+#shareBar{
+    width:1050px;
+    height: 50px;
+    background-color: burlywood;
+    margin: 5px auto;
+}
+#article{
+    width:1050px;
+    min-height: 800px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    margin: 5px auto;
+}
+#comments{
+    width:1050px;
+    min-height: 200px;
+    margin: 0 auto;
+    background-color:green;
+    margin: 5px auto;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 5px 0 0;
+}
+.fm{
+    text-align: center;
+}
+.author{
+    padding: 2px 20px;
+    text-align: center;
+}
+.type{
+    text-indent:2em;
+    padding: 5px ;
+}
+.time{
+    padding: 2px 20px;
+    text-align: center;
+}
+.chapter{
+    padding: 5px 20px;
+    text-indent:2em;
+    font-size: 18px;
+    font-weight: bold;
+}
+.section{
+    padding: 5px 20px;
+    text-indent:2em;
+}
+.image{
+    padding: 15px;
+    text-align: center;
+    margin:  0 auto;
+}
+.image img{
+    max-width: 1000px;
+    max-height: 450px;
+    min-height:200px;
+}
+#comments_title{
+    padding: 8px 15px;
+    text-indent:2em;
+    font-size: 18px;
+}
+.cutline{
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: gray solid 1px;
+}
+#commentBlank{
+    width: 835px;
+    height: 100px;
+    margin: 20px auto;
+}
+#commentBlank ul li textarea{
+    margin-left: 15px;
+    width:590px;
+    height: 90px;
+    padding: 5px;
+    font-size: 15px;
+}
+#commentBlank ul{
+    list-style: none;
+}
+#commentBlank ul li{
+    float: left;
+}
+#btn_sendComment{
+    margin-left: 15px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: darkcyan;
+    cursor: pointer;
+}
+#btn_sendComment:hover{
+    background-color: dodgerblue;
+}
+#commentBlank ul li img{
+    width: 100px;
+}

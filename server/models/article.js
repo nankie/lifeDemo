@@ -13,13 +13,13 @@ var articleSchema = new mongoose.Schema({
     FromWhere:{type:String},
     FromAuthor:{type:String},
     Type:{type:String},
-    XmlName:{type:String},
+    Mark:{type:String},
     Angry:{type:String},
     IsDel:{type:Number},
     DelReason:{type:String},
     IsHot:{type:Number},
     HotReason:{type:String},
-    Date:{type:String}
+    Date:{type:Date}
 });
 //生成方法getModel给予调用，返回user模型,‘user’传入后为储存的collections - users
 exports.getModel = function(){

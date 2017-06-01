@@ -14,7 +14,7 @@ exports.addArticle = function(conditions,dbHelper,callback) {
         callback(result);
     });
 };
-exports.findUser = function(conditions,dbHelper,callback){
+exports.findArticle = function(conditions,dbHelper,callback){
     var articleModel =article.getModel();
     var fields   = {};
     var options  = {};
