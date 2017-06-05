@@ -9,8 +9,8 @@ exports.addComment = function (commentBean,callBack) {
     });
 }
 
-exports.findCommentByArticle = function(articleId,callBack){
-    commentDao.findComment({ArticleId:articleId},helper,function(result){
+exports.findCommentsByArticle = function(mark,callBack){
+    commentDao.findComment({Mark:mark},helper,function(result){
         callBack(result);
     });
 }

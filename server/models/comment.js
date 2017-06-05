@@ -6,9 +6,11 @@ var mongoose = require('mongoose');
 
 //schema 就是如何定义数据的结构
 var commentSchema = new mongoose.Schema({
-
     UserId:{type:String},
-    ArticleId:{type:String},
+    Mark:{
+        type:String,
+        ref:'user'
+    },
     Content:{type:String},
     Type:{type:Number},
     ToComment:{type:String},
@@ -18,6 +20,7 @@ var commentSchema = new mongoose.Schema({
     IsRead:{type:Number},
     IsReadAuthor:{type:Number},
     IsReadAdmin:{type:Number},
+    IP:{type:String},
     Date:{type:Date}
 });
 

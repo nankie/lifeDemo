@@ -45,7 +45,7 @@ body{
     width:1050px;
     min-height: 200px;
     margin: 0 auto;
-    background-color:green;
+    /*background-color:green;*/
     margin: 5px auto;
 }
 .title{
@@ -130,4 +130,36 @@ body{
 }
 #commentBlank ul li img{
     width: 100px;
+}
+#commentsList{
+    width: 835px;
+    min-height: 100px;
+    margin: 20px auto;
+}
+.comment{
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    list-style: none;
+}
+.comment img{
+    width: 40px;
+}
+.comment .comment_mark{
+    position: absolute;
+    top:-5px;
+    left: 30px;
+    font-size: 15px;
+    color: dimgray;
+    padding: 20px;
+}
+.comment .comment_content{
+    margin-top: 10px;
+    text-indent:2em;
+    line-height: 23px;
+}
+.comment_line{
+    width: 95%;
+    margin: 20px auto;
+    border-bottom: gray solid 1px;
 }

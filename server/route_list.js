@@ -11,6 +11,7 @@ var uploadArticleImage = require('../routes/uploadArticleImage');
 var saveArticle = require('../routes/saveArticle');
 var getArticle = require('../routes/getArticle');
 var saveComment = require('../routes/saveComment');
+var getComments = require('../routes/getComments');
 
 
 var list = [];
@@ -24,7 +25,10 @@ list.push(['/newspaper' , newspaper]);
 list.push(['/user/uploadArticleImage' , uploadArticleImage]);
 list.push(['/user/saveArticle' , saveArticle]);
 list.push(['/getArticle' , getArticle]);
+list.push(['/user/getArticle' , getArticle]);
 list.push(['/user/saveComment' , saveComment]);
+list.push(['/user/getComments' , getComments]);
+list.push(['/getComments' , getComments]);
 
 
 exports.initRouters = function(callBack){

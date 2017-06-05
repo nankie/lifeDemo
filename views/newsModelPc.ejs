@@ -77,7 +77,28 @@
                 </ul>
             </div>
             <div class="cutline"></div>
-
+            <!--<div id="commentsList">-->
+                <!--暂无评论。-->
+            <!--</div>-->
+            <div id="commentsList">
+                <div class="comment">
+                    <img src="images/testtouxiang.jpg">
+                    <div class="comment_mark">enphy&nbsp;&nbsp;&nbsp;2017-05-01 2:55</div>
+                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。</div>
+                </div>
+                <div class="comment_line"></div>
+                <div class="comment">
+                    <img src="images/testtouxiang.jpg">
+                    <div class="comment_mark">enphy 2017-05-01 2:55</div>
+                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，</div>
+                </div>
+                <div class="comment_line"></div>
+                <div class="comment">
+                    <img src="images/testtouxiang.jpg">
+                    <div class="comment_mark">enphy 2017-05-01 2:55</div>
+                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。</div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer"></div>
@@ -85,22 +106,55 @@
 </body>
 <script type="text/javascript" src="javascripts/jquery-2.1.3.js"></script>
 <script type="text/javascript">
-function GetQueryString(name) {
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r!=null)return  unescape(r[2]);
-    return null;
-}
-$('#btn_sendComment').click(function(){
-    var comment = $('#commentBlank ul li textarea').val();
-    $.ajax({
-        url:'',
-        type:'post',
-        data:{content:comment,mark:GetQueryString('mark')},
-        success:function(data){
+    //获取path中的参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]);
+        return null;
+    }
 
-        }
+    //显示评论
+    function showComments(){
+        $.ajax({
+            url:'/getComments',
+            type:'get',
+            data:{mark:GetQueryString('mark')},
+            success:function (data) {
+                if(data.success == 1){
+                    //迭代评论
+                    var comments = data.result;
+                    //TODO
+                    $('#commentsList').html('');
+
+                } else{
+                    $('#commentsList').html('系统繁忙，请稍后刷新。');
+                }
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        showComments();
     });
-});
+
+    $('#btn_sendComment').click(function(){
+        var comment = $('#commentBlank ul li textarea').val();
+        $.ajax({
+            url:'/user/saveComment',
+            type:'post',
+            data:{content:comment,mark:GetQueryString('mark'),type:1},
+            success:function(data){
+                if(data.success == 1){
+                    //TODO 评论成功后，刷新评论展示区
+                    alert('评论成功');
+                }else{
+                    alert('评论失败');
+                }
+            }
+        });
+    });
+
+
 </script>
 </html>
