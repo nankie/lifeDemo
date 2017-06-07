@@ -10,7 +10,13 @@ exports.addComment = function (commentBean,callBack) {
 }
 
 exports.findCommentsByArticle = function(mark,callBack){
-    commentDao.findComment({Mark:mark},helper,function(result){
+    commentDao.findComment({Mark:mark,Type:1},helper,function(result){
+        callBack(result);
+    });
+}
+
+exports.findCommentsByComments = function(mark,toComment,callBack){
+    commentDao.findComment({Mark:mark,Type:2,ToComment:toComment},helper,function(result){
         callBack(result);
     });
 }

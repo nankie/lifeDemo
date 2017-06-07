@@ -10,7 +10,7 @@ router.post('/',function(req,res){
         Title:req.body.title,
         IsCopy:req.body.isCopy,
         Type:req.body.type,
-        Date:new Date()
+        Date:new Date().date2str("yyyy-MM-dd hh:mm:ss")
     };
     if(articleBean.IsCopy==1){
         articleBean.FromWhere = req.body.fromWhere;

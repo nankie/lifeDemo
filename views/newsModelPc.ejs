@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>annal</title>
+    <link rel="stylesheet" href="stylesheets/newsModelPC.css">
+    <link rel="stylesheet/less" type="text/css" href="lesses/newsModelPC.less" />
+    <script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
 </head>
-<link rel="stylesheet" href="stylesheets/newsModelPC.css">
+
 <body>
 <div id="flat">
     <div id="header"></div>
@@ -83,21 +86,10 @@
             <div id="commentsList">
                 <div class="comment">
                     <img src="images/testtouxiang.jpg">
-                    <div class="comment_mark">enphy&nbsp;&nbsp;&nbsp;2017-05-01 2:55</div>
-                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。</div>
+                    <div class="comment_mark">dsdsds</div><div class="comment_bar"><a>回复</a>&nbsp;|&nbsp;<a>点赞</a></div>
+                    <div class="comment_content">sdsdsddssssssssssssssssssssssssssssssdsdsdddddddddddddddd</div>
                 </div>
                 <div class="comment_line"></div>
-                <div class="comment">
-                    <img src="images/testtouxiang.jpg">
-                    <div class="comment_mark">enphy 2017-05-01 2:55</div>
-                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，</div>
-                </div>
-                <div class="comment_line"></div>
-                <div class="comment">
-                    <img src="images/testtouxiang.jpg">
-                    <div class="comment_mark">enphy 2017-05-01 2:55</div>
-                    <div class="comment_content">据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。据现场监控视频上的信息显示，5月29日下午1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内1点56分左右，一名身着白色短袖上衣的男子在贵州松桃苗族自治县潜龙洞景区内，看到了步道边的一根半米左右的钟乳石。</div>
-                </div>
             </div>
         </div>
     </div>
@@ -124,8 +116,20 @@
                 if(data.success == 1){
                     //迭代评论
                     var comments = data.result;
-                    //TODO
-                    $('#commentsList').html('');
+                    //迭代之前清空评论区
+//                    $('#commentsList').html('');
+                    for(var i in comments){
+                        var comment = comments[i];
+                        var fromUser = comment.FromUser;
+                        var personImgUrl = fromUser.PersonImg==''||fromUser.PersonImg==null ? 'images/testtouxiang.jpg' : fromUser.PersonImg;
+                        $('#commentsList').append('<div class="comment"><img src=" ' + personImgUrl + ' ">' +
+                            '<div class="comment_mark">' + fromUser.Nickname + '&nbsp;&nbsp;&nbsp;' + comment.Date + '</div>' +
+                            '<div class="comment_content">' + comment.Content + '</div></div>');
+                        if(i<comments.length-1){
+                            $('#commentsList').append('<div class="comment_line"></div>');
+                        }
+                    }
+
 
                 } else{
                     $('#commentsList').html('系统繁忙，请稍后刷新。');
@@ -146,8 +150,9 @@
             data:{content:comment,mark:GetQueryString('mark'),type:1},
             success:function(data){
                 if(data.success == 1){
-                    //TODO 评论成功后，刷新评论展示区
-                    alert('评论成功');
+                    //清空输入框
+                    $('#commentBlank ul li textarea').val('');
+                    showComments();
                 }else{
                     alert('评论失败');
                 }

@@ -109,6 +109,7 @@ body{
     height: 90px;
     padding: 5px;
     font-size: 15px;
+    resize:none;
 }
 #commentBlank ul{
     list-style: none;
@@ -162,4 +163,9 @@ body{
     width: 95%;
     margin: 20px auto;
     border-bottom: gray solid 1px;
+}
+.comment_bar{
+    position: absolute;
+    right:0px;
+    top:5px;
 }

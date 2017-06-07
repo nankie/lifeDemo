@@ -9,7 +9,8 @@ router.post('/', function(req, res) {
         Username:req.body.username,
         Password:req.body.password,
         Nickname:nkm,
-        Type:type
+        Type:type,
+        CrtTime:new Date().date2str("yyyy-MM-dd hh:mm:ss")
     }
     userService.registerUser(userBean,function(result){
         res.json({status:result});

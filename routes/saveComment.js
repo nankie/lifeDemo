@@ -15,9 +15,11 @@ var get_client_ip = function(req) {
 };
 
 router.post('/',function(req,res){
+
     var comment = {
         UserId:req.session.user._id,
         Mark:req.body.mark,
+        FromUser:req.session.user,
         Content:req.body.content,
         Type:req.body.type,
         IsDel:0,
@@ -25,7 +27,7 @@ router.post('/',function(req,res){
         IsReadAuthor:0,
         IsReadAdmin:0,
         IP:get_client_ip(req),
-        Date:new Date()
+        Date:new Date().date2str("yyyy-MM-dd hh:mm:ss")
     }
     console.log('--'+comment.Mark);
     if(comment.Type==2){
