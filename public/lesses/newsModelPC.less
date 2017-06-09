@@ -1,0 +1,81 @@
+/*************************************变量***********************************************/
+/*颜色*/
+@color_bg:aliceblue;
+@color_head:#00B7FF;
+@color_foot:#00B7FF;
+@color_shareBar:burlywood;
+@color_article:antiquewhite;
+/*值*/
+@width_normal:1050px;
+
+
+/*************************************组件类***********************************************/
+/*block并置中*/
+.makeCenter(@width,@height,@padding){
+  display: block;
+  width: @width;
+  height:@height;
+  margin:@padding auto;
+}
+.makeCenter(@padding){
+  margin:@padding auto;
+}
+.font_format(@size,@color,@position,@weight){
+  text-align: @position;
+  font-size: @size;
+  color:@color;
+  font-weight: @weight;
+}
+/*************************************main***********************************************/
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: @color_bg;
+}
+#flat{
+  width: 100%;
+  min-height: 100%;
+}
+#header{
+  width:100%;
+  min-width: @width_normal;
+  height: 50px;
+  background-color: @color_head;
+}
+#footer{
+  width: 100%;
+  min-width: @width_normal;
+  height: 50px;
+  background-color: @color_foot;
+}
+#mainBoard{
+  width: 100%;
+  min-width: @width_normal;
+  min-height:1020px;
+}
+#shareBar{
+  width:@width_normal;
+  height: 50px;
+  background-color: @color_shareBar;
+  .makeCenter(5px);
+}
+#article{
+  width:@width_normal;
+  min-height: 800px;
+  background-color: antiquewhite;
+  .makeCenter(5px);
+}
+#comments{
+  width:@width_normal;
+  min-height: 200px;
+  .makeCenter(5px);
+}
+/*********评论的元素*********/
+.title{
+  .font_format(30px,black,center,normal);
+  padding: 10px 5px 0 0;
+}
