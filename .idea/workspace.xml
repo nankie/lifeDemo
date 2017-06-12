@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f24b69b6-050f-4a21-af30-638bf51e2d17" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lesses/newsModelPC.less" afterPath="$PROJECT_DIR$/public/lesses/newsModelPC.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/newsModelPc.ejs" afterPath="$PROJECT_DIR$/views/newsModelPc.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -23,36 +22,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newsModelPc.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newsModelPc.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="77" />
+            <state relative-caret-position="1431">
+              <caret line="167" column="12" lean-forward="false" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="31" />
               <folding>
-                <marker date="1496806034366" expanded="true" signature="4676:4682" ph="&amp;nbsp;" />
-                <marker date="1496806034366" expanded="true" signature="4682:4688" ph="&amp;nbsp;" />
-                <marker date="1496806034366" expanded="true" signature="4688:4694" ph="&amp;nbsp;" />
+                <marker date="1497251522831" expanded="true" signature="4733:4739" ph="&amp;nbsp;" />
+                <marker date="1497251522831" expanded="true" signature="4739:4745" ph="&amp;nbsp;" />
+                <marker date="1497251522831" expanded="true" signature="4745:4751" ph="&amp;nbsp;" />
+                <marker date="1497251522831" expanded="true" signature="4866:4872" ph="&amp;nbsp;" />
+                <marker date="1497251522831" expanded="true" signature="4873:4879" ph="&amp;nbsp;" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newsModelPC.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/lesses/newsModelPC.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newsModelPC.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/newsModelPC.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -168,8 +149,8 @@
         <option value="$PROJECT_DIR$/routes/saveComment.js" />
         <option value="$PROJECT_DIR$/server/service/commentService.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/newsModelPC.css" />
-        <option value="$PROJECT_DIR$/views/newsModelPc.ejs" />
         <option value="$PROJECT_DIR$/public/lesses/newsModelPC.less" />
+        <option value="$PROJECT_DIR$/views/newsModelPc.ejs" />
       </list>
     </option>
   </component>
@@ -215,7 +196,6 @@
     <panes>
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,6 +338,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -866,11 +847,12 @@
       <workItem from="1496802447989" duration="5394000" />
       <workItem from="1496825734883" duration="598000" />
       <workItem from="1496993177988" duration="6611000" />
+      <workItem from="1497230174010" duration="4431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239563000" />
+    <option name="totallyTimeSpent" value="243994000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,7 +864,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1919" height="1040" extended-state="1" />
+    <frame x="0" y="0" width="1919" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -894,13 +876,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17405406" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2608213" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.041065484" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27169812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15256065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1265,31 +1247,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
+    <entry file="file://$PROJECT_DIR$/public/lesses/newsModelPC.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="77" />
-          <folding>
-            <marker date="1496806034366" expanded="true" signature="4676:4682" ph="&amp;nbsp;" />
-            <marker date="1496806034366" expanded="true" signature="4682:4688" ph="&amp;nbsp;" />
-            <marker date="1496806034366" expanded="true" signature="4688:4694" ph="&amp;nbsp;" />
-          </folding>
+        <state relative-caret-position="1431">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/newsModelPC.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+        <state relative-caret-position="27">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/lesses/newsModelPC.less">
+    <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="1431">
+          <caret line="167" column="12" lean-forward="false" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="31" />
+          <folding>
+            <marker date="1497251522831" expanded="true" signature="4733:4739" ph="&amp;nbsp;" />
+            <marker date="1497251522831" expanded="true" signature="4739:4745" ph="&amp;nbsp;" />
+            <marker date="1497251522831" expanded="true" signature="4745:4751" ph="&amp;nbsp;" />
+            <marker date="1497251522831" expanded="true" signature="4866:4872" ph="&amp;nbsp;" />
+            <marker date="1497251522831" expanded="true" signature="4873:4879" ph="&amp;nbsp;" />
+          </folding>
         </state>
       </provider>
     </entry>

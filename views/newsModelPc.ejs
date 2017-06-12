@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>annal</title>
     <link rel="stylesheet" href="stylesheets/newsModelPC.css">
-    <link rel="stylesheet/less" type="text/css" href="lesses/newsModelPC.less" />
-    <script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
+    <!--<link rel="stylesheet/less" type="text/css" href="lesses/newsModelPC.less" />-->
+    <!--<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>-->
 </head>
 
 <body>
@@ -86,7 +86,7 @@
             <div id="commentsList">
                 <div class="comment">
                     <img src="images/testtouxiang.jpg">
-                    <div class="comment_mark">dsdsds</div><div class="comment_bar"><a>回复</a>&nbsp;|&nbsp;<a>点赞</a></div>
+                    <div class="comment_mark">dsdsds</div><div class="comment_bar"><a class="comment_reply">回复</a>&nbsp;|&nbsp;<a class="comment_good">点赞</a></div>
                     <div class="comment_content">sdsdsddssssssssssssssssssssssssssssssdsdsdddddddddddddddd</div>
                 </div>
                 <div class="comment_line"></div>
@@ -124,11 +124,14 @@
                         var personImgUrl = fromUser.PersonImg==''||fromUser.PersonImg==null ? 'images/testtouxiang.jpg' : fromUser.PersonImg;
                         $('#commentsList').append('<div class="comment"><img src=" ' + personImgUrl + ' ">' +
                             '<div class="comment_mark">' + fromUser.Nickname + '&nbsp;&nbsp;&nbsp;' + comment.Date + '</div>' +
+                            '<div class="comment_bar"><a class="comment_reply">回复</a>&nbsp;|&nbsp;<a class="comment_good">点赞</a></div>'+
                             '<div class="comment_content">' + comment.Content + '</div></div>');
                         if(i<comments.length-1){
                             $('#commentsList').append('<div class="comment_line"></div>');
                         }
                     }
+
+                    comment_bound();
 
 
                 } else{
@@ -159,6 +162,13 @@
             }
         });
     });
+
+    function comment_bound(){
+        $('.comment_reply').click(function(){
+            alert(this.length);
+        });
+    }
+
 
 
 </script>
