@@ -86,8 +86,25 @@
             <div id="commentsList">
                 <div class="comment">
                     <img src="images/testtouxiang.jpg">
-                    <div class="comment_mark">dsdsds</div><div class="comment_bar"><a class="comment_reply">回复</a>&nbsp;|&nbsp;<a class="comment_good">点赞</a></div>
+                    <div class="comment_mark">dsdsds</div>
+                    <div class="comment_bar">
+                        <a class="comment_reply">回复</a>&nbsp;|&nbsp;
+                        <a class="comment_good">点赞</a>
+                    </div>
                     <div class="comment_content">sdsdsddssssssssssssssssssssssssssssssdsdsdddddddddddddddd</div>
+                    <div class="reply_bar">
+                        <ul>
+                            <li>
+                                <img src="images/testtouxiang.jpg">
+                            </li>
+                            <li>
+                                <textarea></textarea>
+                            </li>
+                            <li>
+                                <div class="btn_sendReply">发布</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="comment_line"></div>
             </div>
@@ -165,7 +182,9 @@
 
     function comment_bound(){
         $('.comment_reply').click(function(){
-            alert(this.length);
+            var index = $(this).parent().parent('.comment').index();
+            alert(index);
+            //TODO 动态添加回复框
         });
     }
 
