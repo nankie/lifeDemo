@@ -11,7 +11,7 @@ var commentSchema = new mongoose.Schema({
     FromUser:{type:mongoose.Schema.Types.Mixed },
     Content:{type:String},
     Type:{type:Number},
-    ToComment:{type:String},
+    ToComment:{type:mongoose.Schema.Types.Mixed},
     IsDel:{type:Number},
     WhyDel:{type:String},
     WhoDel:{type:String},

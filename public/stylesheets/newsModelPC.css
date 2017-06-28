@@ -155,9 +155,11 @@ body{
     padding: 20px;
 }
 .comment .comment_content{
+    width:100%;
     margin-top: 10px;
     text-indent:2em;
     line-height: 23px;
+    background-color:aquamarine ;
 }
 .comment_line{
     width: 95%;
@@ -200,6 +202,22 @@ body{
     background-color: darkcyan;
     cursor: pointer;
 }
+.commentTo{
+    width:620px;
+    background-color:lightgrey;
+    border: solid black 1px;
+    color: dimgray;
+    margin: 10px auto;
+    padding: 5px;
+}
+.comment_content span{
+    color: dimgray;
+    padding-left: 5px;
+}
+.comment_content .content{
+    width:600px;
+    background-color: red;
 
+}
 
 

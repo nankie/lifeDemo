@@ -39,7 +39,7 @@ exports.findData = function(model,conditions,fields,options,callback) {
             }
             else{
                 console.log('find fail:no this data!');
-                callback({success: 0, flag: 'find fail:no this data!'});
+                callback({success: 404, flag: 'find fail:no this data!'});
             }
         }
     });
