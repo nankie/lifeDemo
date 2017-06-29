@@ -32,6 +32,7 @@ router.post('/',function(req,res){
     console.log('--'+comment.Mark);
     if(comment.Type==2){
         //回复用户
+        console.log('ToComment:'+comment.ToComment);
         comment.ToComment = req.body.toComment;
     }
     commentServoce.addComment(comment,function(result){
