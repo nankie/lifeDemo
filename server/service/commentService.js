@@ -20,3 +20,9 @@ exports.findCommentsByComments = function(mark,toComment,callBack){
         callBack(result);
     });
 }
+
+exports.findCommentById = function(id,callBack){
+    commentDao.findComment({_id:id},helper,function(result){
+        callBack(result);
+    });
+}

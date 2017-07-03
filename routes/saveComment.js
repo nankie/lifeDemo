@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var commentServoce = require('../server/service/commentService');
+var commentService = require('../server/service/commentService');
 
 var get_client_ip = function(req) {
     var ip = req.headers['x-forwarded-for'] ||
@@ -29,15 +29,21 @@ router.post('/',function(req,res){
         IP:get_client_ip(req),
         Date:new Date().date2str("yyyy-MM-dd hh:mm:ss")
     }
-    console.log('--'+comment.Mark);
     if(comment.Type==2){
         //回复用户
-        console.log('ToComment:'+comment.ToComment);
-        comment.ToComment = req.body.toComment;
+        var toCommentId = req.body.toCommentId;
+        commentService.findCommentById(toCommentId,function(data){
+            comment.ToComment = data.result[0];
+            commentService.addComment(comment,function(result){
+                res.json({success:result.success});
+            });
+        });
+    }else{
+        commentService.addComment(comment,function(result){
+            res.json({success:result.success});
+        });
     }
-    commentServoce.addComment(comment,function(result){
-        res.json({success:result.success});
-    });
+
 
 });
 module.exports = router;

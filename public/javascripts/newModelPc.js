@@ -44,11 +44,11 @@ function showComments(){
                             '<a class="comment_good">点赞</a>'+
                             '</div>'+
                             '<div class="reply_content">回复#'+
-                            '<span>'+comment.toComment.fromUser.Nickname+'</span>:'+
-                            '<div class="content">+replyComment</div>'+
+                            '<span>'+comment.ToComment.FromUser.Nickname+'</span>:'+
+                            '<div class="content">'+comment.Content+'</div>'+
                             '<div class="commentTo">'+
-                            '<span>name time</span>'+
-                            '<div>commentOther</div>'+
+                            '<span>'+comment.ToComment.FromUser.Nickname + '&nbsp;' + comment.ToComment.Date +'</span>'+
+                            '<div>'+comment.ToComment.Content+'</div>'+
                             '</div></div></div>';
                     }
                     $('#commentsList').append(str);
@@ -109,10 +109,11 @@ function comment_bound(){
                 alert('请输入评论！');
                 return;
             }
+            var i = comments[commentIndex];
             $.ajax({
                 url:'/user/saveComment',
                 type:'post',
-                data:{content:comment,mark:GetQueryString('mark'),type:2,toComment:comments[commentIndex]},
+                data:{content:comment,mark:GetQueryString('mark'),type:2,toCommentId:comments[commentIndex]._id},
                 success:function(data){
                     if(data.success == 1){
                         //清空输入框
