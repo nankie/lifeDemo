@@ -218,5 +218,9 @@ body{
 .reply_content .content{
     width:100%;
 }
-
+#commentsTab{
+    width: 835px;
+    min-height: 100px;
+    margin: 20px auto;
+}
 
