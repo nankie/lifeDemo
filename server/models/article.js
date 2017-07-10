@@ -19,6 +19,8 @@ var articleSchema = new mongoose.Schema({
     DelReason:{type:String},
     IsHot:{type:Number},
     HotReason:{type:String},
+    HotUserIds:{type:mongoose.Schema.Types.Mixed},
+    DownUserIds:{type:mongoose.Schema.Types.Mixed},
     Date:{type:String}//Date会已ISODate储存，会难以整理并且会慢8个小时。这里统一用 yyyy-mm-dd hh:mm:ss 格式的字符串储存
 });
 //生成方法getModel给予调用，返回user模型,‘user’传入后为储存的collections - users

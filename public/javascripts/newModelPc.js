@@ -66,8 +66,17 @@ function showComments(){
     });
 }
 
-//发送文章评论
+//回帖变换按钮
 $('#btn_sendComment').click(function(){
+    //切换按钮
+    $(this).hide();
+    $('#commentBlank ul li .sendHot').show().click(function(){sendComment(1)});
+    $('#commentBlank ul li .sendDown').show().click(function(){sendComment(2)});
+
+});
+
+//发送回贴的方法 参数1为加柴 参数2为降雨
+function sendComment(destination){
     var comment = $('#commentBlank ul li textarea').val();
     //TODO 后期加正则验证，这先简单过滤
     if(comment==''||comment==null){
@@ -77,18 +86,21 @@ $('#btn_sendComment').click(function(){
     $.ajax({
         url:'/user/saveComment',
         type:'post',
-        data:{content:comment,mark:GetQueryString('mark'),type:1},
+        data:{content:comment,mark:GetQueryString('mark'),type:1,destination:destination},
         success:function(data){
             if(data.success == 1){
                 //清空输入框
                 $('#commentBlank ul li textarea').val('');
+                $('#btn_sendComment').show();
+                $('#commentBlank ul li .sendHot').hide();
+                $('#commentBlank ul li .sendDown').hide();
                 showComments();
             }else{
                 alert('评论失败');
             }
         }
     });
-});
+}
 
 function comment_bound(){
     $('.comment_reply').click(function(){

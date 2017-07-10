@@ -8,3 +8,13 @@ exports.addArticle = function (articleBean,callBack) {
         callBack(result);
     });
 }
+exports.addHotUser = function(mark,userId,callBack){
+    articleDao.updateArticle({Mark:mark},{$addToSet:{HotUserIds:userId}},helper,function(result){
+        callBack(result);
+    });
+}
+exports.addDownUser = function(mark,userId,callBack){
+    articleDao.updateArticle({Mark:mark},{$addToSet:{DownUserIds:userId}},helper,function(result){
+        callBack(result);
+    });
+}

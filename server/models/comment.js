@@ -19,6 +19,7 @@ var commentSchema = new mongoose.Schema({
     IsReadAuthor:{type:Number},
     IsReadAdmin:{type:Number},
     IP:{type:String},
+    Destination:{type:Number},
     Date:{type:String} //Date会已ISODate储存，会难以整理并且会慢8个小时。这里统一用 yyyy-mm-dd hh:mm:ss 格式的字符串储存
 });
 

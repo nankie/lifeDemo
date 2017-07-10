@@ -22,3 +22,10 @@ exports.findArticle = function(conditions,dbHelper,callback){
         callback(result);
     });
 }
+exports.updateArticle = function (conditions,doc,dbHelper,callback) {
+    var commentModel =article.getModel();
+    var options  = {};
+    dbHelper.updateDate(commentModel,conditions,doc,options,function(result){
+        callback(result);
+    });
+}

@@ -44,3 +44,23 @@ exports.findData = function(model,conditions,fields,options,callback) {
         }
     });
 }
+
+/**
+ * 公共update方法
+ * @param model
+ * @param conditions
+ * @param fields
+ * @param options
+ * @param callback
+ */
+exports.updateDate = function(model,conditions,doc,options,callback) {
+    model.update(conditions, doc, options, function(error, result){
+        if(error) {
+            console.log(error);
+            callback({success: 0, flag: "update fail"});
+        } else {
+            console.log('update success!');
+            callback({success: 1, flag: 'update success!'});
+        }
+    });
+}
