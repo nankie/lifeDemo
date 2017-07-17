@@ -91,9 +91,9 @@ function sendComment(destination){
             if(data.success == 1){
                 //清空输入框
                 $('#commentBlank ul li textarea').val('');
+                $('#commentBlank ul li .sendHot').hide().unbind("click");
+                $('#commentBlank ul li .sendDown').hide().unbind("click");
                 $('#btn_sendComment').show();
-                $('#commentBlank ul li .sendHot').hide();
-                $('#commentBlank ul li .sendDown').hide();
                 showComments();
             }else{
                 alert('评论失败');

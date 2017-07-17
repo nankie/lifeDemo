@@ -4,15 +4,9 @@
     <list default="true" id="f24b69b6-050f-4a21-af30-638bf51e2d17" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/newModelPc.js" afterPath="$PROJECT_DIR$/public/javascripts/newModelPc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/newsModelPC.css" afterPath="$PROJECT_DIR$/public/stylesheets/newsModelPC.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/getComments.js" afterPath="$PROJECT_DIR$/routes/getComments.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/saveComment.js" afterPath="$PROJECT_DIR$/routes/saveComment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/DBHelper/helper.js" afterPath="$PROJECT_DIR$/server/DBHelper/helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/DBSql/articleDao.js" afterPath="$PROJECT_DIR$/server/DBSql/articleDao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/article.js" afterPath="$PROJECT_DIR$/server/models/article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/comment.js" afterPath="$PROJECT_DIR$/server/models/comment.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/service/articleService.js" afterPath="$PROJECT_DIR$/server/service/articleService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/service/commentService.js" afterPath="$PROJECT_DIR$/server/service/commentService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/newsModelPc.ejs" afterPath="$PROJECT_DIR$/views/newsModelPc.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,9 +29,31 @@
       <file leaf-file-name="newsModelPc.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+            <state relative-caret-position="2160">
+              <caret line="80" column="25" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newModelPc.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/newModelPc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2241">
+              <caret line="83" column="15" lean-forward="false" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+              <folding>
+                <marker date="1499929365908" expanded="true" signature="1175:1181" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1181:1187" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1187:1193" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1308:1314" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1315:1321" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1685:1691" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1691:1697" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1697:1703" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1849:1855" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="1856:1862" ph="&amp;nbsp;" />
+                <marker date="1499929365908" expanded="true" signature="2321:2327" ph="&amp;nbsp;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,40 +61,18 @@
       <file leaf-file-name="newsModelPC.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/newsModelPC.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
+            <state relative-caret-position="3726">
               <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newModelPc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/newModelPc.js">
+      <file leaf-file-name="saveComment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/saveComment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-              <folding>
-                <marker date="1499674723526" expanded="true" signature="1175:1181" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1181:1187" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1187:1193" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1308:1314" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1315:1321" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1685:1691" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1691:1697" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1697:1703" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1849:1855" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="1856:1862" ph="&amp;nbsp;" />
-                <marker date="1499674723526" expanded="true" signature="2321:2327" ph="&amp;nbsp;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/DBHelper/helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="55" column="50" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="1377">
+              <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -87,18 +81,8 @@
       <file leaf-file-name="articleService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/service/articleService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articleDao.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/DBSql/articleDao.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="432">
+              <caret line="16" column="102" lean-forward="false" selection-start-line="16" selection-start-column="102" selection-end-line="16" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -114,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveComment.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/saveComment.js">
+      <file leaf-file-name="commentService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/service/commentService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="52" column="85" lean-forward="true" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+            <state relative-caret-position="135">
+              <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -156,6 +140,8 @@
       <find>835</find>
       <find>commentsList</find>
       <find>btn_sendComment</find>
+      <find>findCommentsByComments</find>
+      <find>sendComment</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,18 +190,18 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/registerRouter.js" />
         <option value="$PROJECT_DIR$/public/lesses/newsModelPC.less" />
-        <option value="$PROJECT_DIR$/routes/getComments.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/newsModelPC.css" />
         <option value="$PROJECT_DIR$/views/newsModelPc.ejs" />
-        <option value="$PROJECT_DIR$/public/javascripts/newModelPc.js" />
-        <option value="$PROJECT_DIR$/server/service/commentService.js" />
         <option value="$PROJECT_DIR$/server/DBSql/commentDao.js" />
         <option value="$PROJECT_DIR$/server/DBHelper/helper.js" />
         <option value="$PROJECT_DIR$/server/DBSql/articleDao.js" />
         <option value="$PROJECT_DIR$/server/models/comment.js" />
         <option value="$PROJECT_DIR$/server/models/article.js" />
-        <option value="$PROJECT_DIR$/server/service/articleService.js" />
+        <option value="$PROJECT_DIR$/routes/getComments.js" />
+        <option value="$PROJECT_DIR$/server/service/commentService.js" />
         <option value="$PROJECT_DIR$/routes/saveComment.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/newModelPc.js" />
+        <option value="$PROJECT_DIR$/server/service/articleService.js" />
       </list>
     </option>
   </component>
@@ -227,19 +213,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="1" />
     <option name="width" value="1919" />
-    <option name="height" value="1040" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -259,14 +239,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lifedemo" />
+              <option name="myItemId" value="lifeDemo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -276,7 +254,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lifedemo" />
+              <option name="myItemId" value="lifeDemo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -290,7 +268,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lifedemo" />
+              <option name="myItemId" value="lifeDemo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -302,48 +280,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lifedemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lifeDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DBSql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lifedemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lifeDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DBHelper" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,7 +297,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="6.10.0" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crmDemo" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -865,11 +809,15 @@
       <workItem from="1499304431391" duration="9859000" />
       <workItem from="1499649768080" duration="3806000" />
       <workItem from="1499672687202" duration="8220000" />
+      <workItem from="1499754687384" duration="8655000" />
+      <workItem from="1499845290872" duration="1845000" />
+      <workItem from="1499928533681" duration="2105000" />
+      <workItem from="1500273777633" duration="967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334954000" />
+    <option name="totallyTimeSpent" value="348526000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -881,7 +829,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1919" height="1040" extended-state="0" />
+    <frame x="0" y="1" width="1919" height="1039" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -893,13 +841,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17405406" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15649278" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14650388" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16927224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17574124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -914,37 +862,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17405406" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15649278" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16927224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1236,70 +1153,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
+    <entry file="file://$PROJECT_DIR$/server/DBHelper/helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/newModelPc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-          <folding>
-            <marker date="1499674723526" expanded="true" signature="1175:1181" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1181:1187" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1187:1193" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1308:1314" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1315:1321" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1685:1691" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1691:1697" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1697:1703" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1849:1855" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="1856:1862" ph="&amp;nbsp;" />
-            <marker date="1499674723526" expanded="true" signature="2321:2327" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/newsModelPC.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="143">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/DBSql/commentDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="371">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/getComments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/service/commentService.js">
+    <entry file="file://$PROJECT_DIR$/server/DBSql/articleDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="81">
+          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/models/comment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/saveComment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/newsModelPC.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3726">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1312,35 +1212,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/saveComment.js">
+    <entry file="file://$PROJECT_DIR$/server/service/commentService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="52" column="85" lean-forward="true" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/DBSql/articleDao.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state relative-caret-position="135">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/service/articleService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="432">
+          <caret line="16" column="102" lean-forward="false" selection-start-line="16" selection-start-column="102" selection-end-line="16" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/DBHelper/helper.js">
+    <entry file="file://$PROJECT_DIR$/views/newsModelPc.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="55" column="50" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        <state relative-caret-position="2160">
+          <caret line="80" column="25" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/newModelPc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2241">
+          <caret line="83" column="15" lean-forward="false" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+          <folding>
+            <marker date="1499929365908" expanded="true" signature="1175:1181" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1181:1187" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1187:1193" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1308:1314" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1315:1321" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1685:1691" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1691:1697" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1697:1703" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1849:1855" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="1856:1862" ph="&amp;nbsp;" />
+            <marker date="1499929365908" expanded="true" signature="2321:2327" ph="&amp;nbsp;" />
+          </folding>
         </state>
       </provider>
     </entry>

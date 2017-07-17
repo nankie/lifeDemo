@@ -9,12 +9,12 @@ exports.addArticle = function (articleBean,callBack) {
     });
 }
 exports.addHotUser = function(mark,userId,callBack){
-    articleDao.updateArticle({Mark:mark},{$addToSet:{HotUserIds:userId}},helper,function(result){
+    articleDao.updateArticle({Mark:mark},{$addToSet:{HotUserIds:{id:userId,date:new Date().getTime()}}},helper,function(result){
         callBack(result);
     });
 }
 exports.addDownUser = function(mark,userId,callBack){
-    articleDao.updateArticle({Mark:mark},{$addToSet:{DownUserIds:userId}},helper,function(result){
+    articleDao.updateArticle({Mark:mark},{$addToSet:{DownUserIds:{id:userId,date:new Date().getTime() }}},helper,function(result){
         callBack(result);
     });
 }

@@ -4,9 +4,10 @@ var commentService = require('../server/service/commentService');
 
 router.get('/',function(req,res){
     var mark = req.query.mark;
-    commentService.findCommentsByArticle(mark,function(result){
+    commentService.findCommentsByArticle(mark,null,function(result){
         res.json(result);
     });
 });
+
 
 module.exports = router;

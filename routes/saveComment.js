@@ -43,7 +43,7 @@ router.post('/',function(req,res){
             });
         });
     }else{
-        commentService.addComment(comment,null,function(result){
+        commentService.addComment(comment,function(result){
             res.json({success:result.success});
         });
     }
